@@ -12,7 +12,8 @@ function App() {
     setTodos(newTodos);
   }
 
-  function handleSave() {
+  function handleSave(e) {
+    e.preventDefault();
     setTodos((oldstate) => [...oldstate, inputvalue]);
     setInputvalue('');
   }
@@ -33,7 +34,11 @@ function App() {
           value={inputvalue}
         />
         <div className="card">
-          <button className="border-2 bg-slate-100 w-36 h-12" type="button" onClick={handleSave}>
+          <button
+            className="border-2 bg-slate-100 w-36 h-12"
+            type="button"
+            onClick={(e) => handleSave(e)}
+          >
             Adicionar
           </button>
           <div>
