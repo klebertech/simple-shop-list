@@ -37,22 +37,23 @@ function App() {
             Adicionar
           </button>
           <div>
-            {todos.map((todo, index) => (
-              <div className="flex flex-wrap justify-between border-2 bg-slate-100 w-full my-2">
-                <div className="ml-4">{todo}</div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 text-red-500"
-                  onClick={() => handleDelete(index)}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
-            ))}
+            {todos
+              && todos.map((todo, index) => (
+                <div className="flex flex-wrap justify-between border-2 bg-slate-100 w-full my-2">
+                  <div className="ml-4">{todo}</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 text-red-500"
+                    onClick={() => handleDelete(index)}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+              ))}
           </div>
         </div>
       </div>
