@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="bg-blue-400 w-screen h-screen flex flex-wrap">
-      <div className="flex flex-wrap flex-col mx-auto my-auto text-center">
+      <div className="flex flex-wrap flex-col mx-auto mt-12 text-center">
         <h1 className="text-4xl pb-12">Lista de compras</h1>
         <input
           type="text"

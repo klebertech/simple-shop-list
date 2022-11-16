@@ -1,6 +1,12 @@
 # Simple-shop-list
 
-##Simple aplication for study propouse
+## How to start
+
+`npm install`
+
+`npm run dev`
+
+## Simple aplication for study propouse
 
 Techs used:
 
