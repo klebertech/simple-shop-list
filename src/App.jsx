@@ -14,8 +14,12 @@ function App() {
 
   function handleSave(e) {
     e.preventDefault();
-    setTodos((oldstate) => [...oldstate, inputvalue]);
-    setInputvalue('');
+    if (inputvalue !== '') {
+      setTodos((oldstate) => [...oldstate, inputvalue]);
+      setInputvalue('');
+    } else {
+      alert('Adicione uma tarefa');
+    }
   }
 
   useEffect(() => {
